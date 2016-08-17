@@ -18,6 +18,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "angular-bootstrap": "^2.0.2",
+    "angular-file-upload": "^2.3.4",
+    "angular-ui-router": "^0.3.1",
+    "angular-smart-table": "^2.1.8",
+    "bootstrap": "^3.3.7"
   }
 }
