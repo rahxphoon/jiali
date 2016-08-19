@@ -9,10 +9,13 @@
   },
   "license": "MIT",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "express": "~4.11.x",
     "kerberos": "~0.0.x",
+    "mongoose": "^4.5.9",
     "parse": "~1.8.0",
-    "parse-server": "~2.2.12"
+    "parse-server": "~2.2.12",
+    "qiniu": "^6.1.11"
   },
   "scripts": {
     "start": "node index.js"
