@@ -8,6 +8,6 @@ var lightSchema = new Schema({
     link: String,
     title: String,
     price: String,
-    name: String
+    imgsrc:String
 }); //  定义了一个新的模型，但是此模式还未和users集合有关联
 exports.light = db.model('light', lightSchema); //  与users集合关联

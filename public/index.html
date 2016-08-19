@@ -6,21 +6,26 @@
     <link rel="stylesheet" href="/public/bower_components/angular-bootstrap/ui-bootstrap-csp.css">
     <title>Title</title>
 </head>
-<body ng-app="jiali">
+<body ng-app="jiali" ng-controller="jiali.controller as vm">
 <div ui-view><h1>加载中...</h1></div>
 <!-- We'll also add some navigation: -->
 <a ui-sref="state1">State 1</a>
+<a href="/craw">ggggg</a>
+<button ng-click="vm.jumpToLight()">跳转页面</button>
 
-
-</div>
-</table>
 <script src="/public/bower_components/angular/angular.js"></script>
 <script src="/public/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
 <script src="/public/bower_components/angular-file-upload/dist/angular-file-upload.js"></script>
 <script src="/public/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="/public/bower_components/angular-smart-table/dist/smart-table.js"></script>
+<script src="/public/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/public/bower_components/angular-route/angular-route.js"></script>
 <script src="/public/jiali-model.js"></script>
 <script src="/public/jiali-config.js"></script>
+<script src="/public/jiali-controller.js"></script>
+<script src="/public/crawedLights/js/model.js"></script>
 
+<script src="/public/crawedLights/js/controller.js"></script>
+<script src="/public/crawedLights/js/service.js"></script>
 </body>
 </html>

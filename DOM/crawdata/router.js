@@ -1,7 +1,7 @@
 /**
  * Created by HECH on 8/18/2016.
  */
-var light = require('./model.js').light;
+var light = require('./../models/model.js').light;
 //var test = new light({
 //    link: 'ss',
 //    title: 'test website'

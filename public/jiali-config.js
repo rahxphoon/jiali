@@ -7,17 +7,28 @@
 
 
     config.$inject =
-        [
+        ['$routeProvider',
             '$stateProvider',
             '$urlRouterProvider',
         ];
-    function config($stateProvider,
+    function config($routeProvider, $stateProvider,
                     $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/state1");
-        $stateProvider.state('state1', {
-            url: '/login',
-            templateUrl: "public/login/test.html"
-        })
+        //$urlRouterProvider.otherwise("/state1");
+        //$stateProvider.state('state1', {
+        //    url: '/login',
+        //    templateUrl: "public/login/test.html"
+        //})
+        $routeProvider.when('/', {
+            templateUrl: '/public/index.html',
+            controller: 'jiali.controller',
+            controllerAs: 'vm'
+        }).when('/craw', {
+                templateUrl: '/public/crawedLights/result.html',
+                controller: 'jiali.craw.controller',
+                controllerAs: 'vm'
+            })
+            .otherwise({
+                redirectTo: '/'
+            })
     }
-
 })();

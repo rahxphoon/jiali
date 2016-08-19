@@ -3,7 +3,7 @@
  */
 (function () {
     var dependency =
-        ['ui.router', 'smart-table'];
+        ['ui.router', 'smart-table','ngRoute','ngResource','jiali.craw'];
 
     angular.module('jiali', dependency)
 })();

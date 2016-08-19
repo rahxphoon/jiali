@@ -9,7 +9,7 @@ var cheerio = require('cheerio'),
     chalk = require('chalk'),
     fs = require('fs'),
     promise = require('bluebird'),
-    light=require('./model.js').light,
+    light = require('./../models/crawedLightModel.js').light,
     result = [];
 function crawOnePage(url) {
     return new Promise(function (resolve, reject) {
@@ -40,11 +40,22 @@ var processAllJobs = function () {
     return Promise.all(files);
 }
 processAllJobs().then(function (data) {
-        var result = JSON.stringify(data);
-
-        console.log('craw finished!!!')
-        // console.log(result);
-        fs.writeFile("1stoplighting.json", result);
+        var result = data[0];
+        for (var i = 0; i < result.length; i++) {
+            light.create({
+                title: result[i].title.trim(),
+                imgsrc: result[i].imgsrc,
+                price: result[i].price,
+                link: result[i].link
+            }, function (err, res) {
+                if (!err) {
+                    console.log('successfully inserted!!')
+                }
+                else {
+                    console.error(err);
+                }
+            })
+        }
     }
 )
 
